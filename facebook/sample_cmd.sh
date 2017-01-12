@@ -1,1 +1,1 @@
-scrapy crawl facebook -t csv -a CSV_DELIMITER="\t" -a PAGE=145649977189 -o test.csv
+scrapy crawl facebook -t csv -a CSV_DELIMITER="\t" -a PAGE=345762310362 -o eztable.csv

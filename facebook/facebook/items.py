@@ -12,6 +12,9 @@ class FacebookItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
 	id = scrapy.Field()
+	type = scrapy.Field()
+	object_id = scrapy.Field()
+	images = scrapy.Field()
 	story = scrapy.Field()
 	message = scrapy.Field()
 	created_time = scrapy.Field()
