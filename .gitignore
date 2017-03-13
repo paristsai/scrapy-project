@@ -2,4 +2,4 @@ SCRAPY_ENV
 tutorial
 *.csv
 *.pyc
-
+.*
