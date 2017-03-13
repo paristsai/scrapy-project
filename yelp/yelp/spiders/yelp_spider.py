@@ -10,7 +10,8 @@ class YelpSpider(scrapy.Spider):
     name = "yelp"
     def __init__(self, PAGE=None, *args, **kwargs):
         super(YelpSpider, self).__init__(*args, **kwargs)
-        self.proxy_pool = ['http://proxy2-1262.appspot.com/proxy', 'http://proxy3-1262.appspot.com/proxy', 'http://proxy4-1262.appspot.com/proxy', 'http://proxy5-1262.appspot.com/proxy', 'http://proxy6-1262.appspot.com/proxy', 'http://proxy7-1262.appspot.com/proxy', 'http://proxy8-1262.appspot.com/proxy']
+        with open('proxy_list.txt', 'r') as f:
+            self.proxy_pool = f.read().split('\n')
         self.domain = 'https://www.yelp.com.tw'
         self.search_base_url = self.domain + '/search?find_loc=%E5%8F%B0%E5%8C%97%E5%B8%82&start={}&cflt=restaurants'
         self.page = 1
