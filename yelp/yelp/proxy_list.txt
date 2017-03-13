@@ -1,7 +1,0 @@
-http://proxy2-1262.appspot.com/proxy:80
-http://proxy3-1262.appspot.com/proxy:80
-http://proxy4-1262.appspot.com/proxy:80
-http://proxy5-1262.appspot.com/proxy:80
-http://proxy6-1262.appspot.com/proxy:80
-http://proxy7-1262.appspot.com/proxy:80
-http://proxy8-1262.appspot.com/proxy:80
