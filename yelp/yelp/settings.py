@@ -22,14 +22,14 @@ NEWSPIDER_MODULE = 'yelp.spiders'
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 5
+CONCURRENT_REQUESTS = 6
 
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
-#CONCURRENT_REQUESTS_PER_DOMAIN = 16
+CONCURRENT_REQUESTS_PER_DOMAIN = 8
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
@@ -57,9 +57,9 @@ CONCURRENT_REQUESTS = 5
 #}
 
 # Retry many times since proxies often fail
-# RETRY_TIMES = 10
+RETRY_TIMES = 3
 # Retry on most error codes since proxies fail for different reasons
-# RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
+RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': 90,
@@ -107,3 +107,10 @@ HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 # 1 = Take only one proxy from the list and assign it to every requests
 # 2 = Put a custom proxy to use in the settings
 # PROXY_MODE = 0
+
+# Custom csv export format 
+FEED_EXPORTERS = {
+    'csv': 'yelp.custom_exporter.MyProjectCsvItemExporter',
+}
+
+# CSV_DELIMITER = "\t"

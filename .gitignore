@@ -3,4 +3,4 @@ tutorial
 *.csv
 *.pyc
 .*
-proxy_list.txt
+proxy_list*.txt
